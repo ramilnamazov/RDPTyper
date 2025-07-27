@@ -121,50 +121,7 @@ For the tool to work properly with RDP, ensure these settings:
 - No credentials written to disk
 - No logging of sensitive data
 
-## 🔧 Troubleshooting
 
-### Linux Users
-If you get tkinter errors:
-```bash
-# Ubuntu/Debian
-sudo apt-get install python3-tk
-
-# Fedora
-sudo dnf install python3-tkinter
-
-# Arch
-sudo pacman -S tk
-```
-
-### macOS Users
-May need to grant accessibility permissions:
-- System Preferences → Security & Privacy → Privacy → Accessibility
-- Add Terminal/Python to allowed apps
-
-### Common Issues
-
-1. **"Module not found" errors**:
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
-
-2. **Typing too fast/slow**:
-   - Modify `self.char_delay` in the code (default: 0.08 seconds)
-
-3. **RDP window loses focus**:
-   - Increase `self.initial_delay` (default: 0.5 seconds)
-
-## 📦 Creating Executable
-
-To create a standalone .exe file:
-
-```bash
-pip install pyinstaller
-pyinstaller --onefile --windowed --name "RDP_Typer_v1.0" "RDP Typer.py"
-```
-
-Executable will be in `dist/RDP_Typer_v1.0.exe`
 
 ## 📄 License
 
